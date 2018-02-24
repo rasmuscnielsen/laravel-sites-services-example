@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a529934503639f8c6783b21b7efe77f1",
+    "content-hash": "42db7dfa76be72eccc0f73faa301c280",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1259,6 +1259,50 @@
                 "uuid"
             ],
             "time": "2018-01-20T00:28:24+00:00"
+        },
+        {
+            "name": "services/auth",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./services/auth",
+                "reference": "2788afb0b342e31d3dc7f06cd4a343b4df6c4100",
+                "shasum": null
+            },
+            "type": "project",
+            "extra": {
+                "laravel": {
+                    "providers": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Services\\Auth\\": "app"
+                }
+            }
+        },
+        {
+            "name": "sites/web",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./sites/web",
+                "reference": "df89db8bc3772fabd0f4b3144a57c294aec8eafa",
+                "shasum": null
+            },
+            "type": "project",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sites\\Web\\Providers\\WebServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sites\\Web\\": "app"
+                }
+            }
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4006,7 +4050,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "services/auth": 20,
+        "sites/web": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

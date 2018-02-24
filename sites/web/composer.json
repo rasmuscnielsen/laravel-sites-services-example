@@ -1,0 +1,16 @@
+{
+    "name": "sites/web",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Sites\\Web\\": "app"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sites\\Web\\Providers\\WebServiceProvider"
+            ]
+        }
+    }
+}
